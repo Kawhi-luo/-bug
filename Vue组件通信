@@ -1,0 +1,32 @@
+啊啊啊啊啊……
+
+1.非父子组件通信
+不要跟老夫说什么兄弟组件通信，非父子就是非父子，你大爷还是你大爷，不是你兄弟，走着
+
+首先搭一个公交站，就在assets里吧
+起个站名eventBus.js,然后
+
+import Vue from 'Vue'
+export default	new	Vue;
+
+这就没了，是不是很简单？咋这么简单？
+
+然后
+
+import  bus from '../assets/eventBus';
+
+记得这句话要写在export default之前。
+
+接着创建全局监听$on(好像这么说不太对)，举个栗子:
+bus.$on("user",function(name){
+    vm.userName=name;
+});
+
+用$emit触发一哈:
+
+bus.$emit("name","kawhi");
+
+两个名字记得对上吼，zaza。。
+大大大大页面记得用Vuex。
+
+父子组件等会儿吧，来活儿了
