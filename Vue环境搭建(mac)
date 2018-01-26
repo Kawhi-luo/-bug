@@ -1,0 +1,37 @@
+啊啊啊啊啊……
+新工作不写日报了感觉荒废了好多东西……
+话说辞职了日报没得看了笔记全给别人做了……花克……
+学学某猎头在git上做做笔记……
+
+重构ATP……
+先写个Vue的环境搭建吧
+
+1.少年，不来个brew吗？
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+2.然后不再来个node？
+
+3.获取node.js模块安装目录权限
+sudo chmod -R 777 /usr/local/lib/node_modules/
+
+4.淘宝镜像来一个
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+5.webpack来一个
+cnpm install webpack -g
+
+6.小伙子们，脚手架搭起来
+npm install vue-cli -g
+
+7.找个文件夹开整
+vue init webpack-simple 工程英文名(不起名好像也可以)
+
+8.npm这一块…
+npm install    进口的(容易莫名的崩，跑得快啊，sou~)
+cnpm install   国产的(跑起来慢，磨磨唧唧的，不过乱七八糟的教程都是在cnpm下跑的)
+
+9.不来个Vue模块吗，router？resource?axios?vuex?
+cnpm install vue-router vue-resource --save
+
+10.驾驾驾
+npm run build
