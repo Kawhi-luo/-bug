@@ -1,0 +1,35 @@
+啊……不能转正就……哭哭，车票都买晚了难道让我退票回家吗？
+
+略略略
+
+说下遇到的问题
+删Versions莲花的时候不小心删到了node的模块…可恶啊
+各种报错 缺文件 装一个报缺另一个
+重装项目到这一步
+npm install vue-cli -g
+应该是npm里的被干掉了，因为cnpm能跑…但是也太墨迹了
+哇的一声哭出来 
+emmmm
+遇到这种情况还是卸载了node重新装吧
+那么问题来了，怎么删干净呢？
+
+首先是npm这个小标砸
+sudo npm uninstall npm -g
+
+然后是node这个坑板子(其实是我坑，但是我甩的一手好锅呀~)
+rm -r bin/node bin/node-waf include/node lib/node lib/pkgconfig/nodejs.pc share/man/man1/node.1
+
+在知乎里看到了更绝的……
+删除/usr/local/lib中的所有node和node_modules2.
+删除/usr/local/lib中的所有node和node_modules的文件夹3.
+如果是从brew安装的, 运行brew uninstall node4.
+检查~/中所有的local, lib或者include文件夹, 删除里面所有node和node_modules5. 
+在/usr/local/bin中, 删除所有node的可执行文件6. 
+最后运行以下代码:sudo rm /usr/local/bin/npm
+sudo rm /usr/local/share/man/man1/node.1
+sudo rm /usr/local/lib/dtrace/node.d
+sudo rm -rf ~/.npm
+sudo rm -rf ~/.node-gyp
+sudo rm /opt/local/bin/node
+sudo rm /opt/local/include/node
+sudo rm -rf /opt/local/lib/node_modules
