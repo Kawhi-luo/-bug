@@ -33,3 +33,10 @@ sudo rm -rf ~/.node-gyp
 sudo rm /opt/local/bin/node
 sudo rm /opt/local/include/node
 sudo rm -rf /opt/local/lib/node_modules
+
+
+啊…好多坑不知道先填哪个……
+接着写吧。。。
+卸载完之后，emmmmm
+再重启个项目吧，这个废了。
+先想到这里。
