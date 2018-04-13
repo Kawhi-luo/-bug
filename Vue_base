@@ -1,0 +1,25 @@
+v-mind.title = '属性名'  给某个dom添加属性
+
+v-model = '可以是方法名、数据、算法、布尔属性'
+
+v-if='true/false'  让元素消失，是指从页面上删除元素，或者显示，是从页面上添加元素
+也可以当if条件用，
+但是vue一般需要条件判断，通常使用三目运算
+
+v-show= 'true/false' 让元素隐藏、显示    跟display:block/none相同
+
+:key = '任意值'   不重复使用的指令
+
+:class = {a,b}/{a:b,c:d}/[a,b,c]    class添加（前面不要少了冒号）
+
+v-for('(i,index) in list(对象、数组)')   给什么元素上面添加，就循环这个元素执行
+
+v-on:事件名='function名'  也可简写   @click='function名'
+
+eg:    v-on:click='fun'     @click='fun';   fun 就是函数名，简写的意思
+
+如果事件需要传参  可以使用function名(参数)
+
+按键事件@key.键名/code值='fun'   回车的时候触发什么事件
+
+eg:    @key.enter='fun'     @key.13='fun'
