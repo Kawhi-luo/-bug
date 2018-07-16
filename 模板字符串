@@ -1,8 +1,0 @@
-${data[i][22]['description'].map((item,x)=>
-  `<tr><td><a href='${data[i][22]['description'][x]['site']}'>${data[i][22]['description'][x]['site']}</a></td><td ${data[i][22]['description'][x]['status code'] == "200" ? "" : "class='red'"}>${data[i][22]['description'][x]['status code']}</td></tr>`
-  )
-}
-
-function com(){};
-${com()};
-<%com()%>;
