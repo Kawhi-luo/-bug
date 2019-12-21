@@ -23,34 +23,3 @@ eg:    v-on:click='fun'     @click='fun';   fun 就是函数名，简写的意�
 按键事件@key.键名/code值='fun'   回车的时候触发什么事件
 
 eg:    @key.enter='fun'     @key.13='fun'
-
-
-messsageBus.$emit（优先使用）和this.messsageBus.emit相同
-messsageBus.$on === this.messsageBus.on
-
-创建/修改 状态
-this.messsageBus.emit('SsspPreview', data);
-
-监听更改 SsspPreview
-this.messsageBus.on('SsspPreview', (data: any) => {
-	// 进行操作
-});
-
-子传父
-子组件
-this.$emit('previewVideoEmit', false);
-父组件
-<html @previewVideoEmit="previewVideoEmit"></html>
-（<html @previewVideoEmit="aaa"></html>  private aaa(){} 这样就行吧）
-private previewVideoEmit() {
-	this.previewVideoShow = false;
-}
-
-父传子
-父组件
-<html :previewUrl=""></html>
-子组件
-@Prop() public previewUrl: any;
-previewUrl是父组件传过来的，找机会赋值
-
-
