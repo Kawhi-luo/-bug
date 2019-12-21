@@ -18,15 +18,34 @@ import  bus from '../assets/eventBus';
 记得这句话要写在export default之前。
 
 接着创建全局监听$on(好像这么说不太对)，举个栗子:
-bus.$on("user",function(name){
-    vm.userName=name;
-});
+created(){
+    bus.$on("name",function(name){
+        vm.userName=name;
+    });
+}
 
-用$emit触发一哈:
-
+事件触发:
 bus.$emit("name","kawhi");
 
-两个名字记得对上吼，zaza。。
+两个名字(name)记得对上吼，zaza。。
 大大大大页面记得用Vuex。
 
 父子组件等会儿吧，来活儿了
+
+
+子传父
+子组件
+this.$emit('previewVideoEmit', false);
+父组件
+<html @previewVideoEmit="previewVideoEmit"></html>
+（<html @previewVideoEmit="aaa"></html>  private aaa(){} 这样就行吧）
+private previewVideoEmit() {
+	this.previewVideoShow = false;
+}
+
+父传子
+父组件
+<html :previewUrl=""></html>
+子组件
+@Prop() public previewUrl: any;
+previewUrl是父组件传过来的，找机会赋值
